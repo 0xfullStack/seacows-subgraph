@@ -113,8 +113,13 @@ export function handlePairCreated(event: PairCreated): void {
     const collectionContract = CollectionContract.bind(_collection);
 
     collection = new Collection(_collection.toHexString());
-    collection.name = collectionContract.name();
-    collection.symbol = collectionContract.symbol();
+
+    let nameResult = collectionContract.try_name();
+    collection.name = nameResult.reverted ? 'unknown' : nameResult.value
+
+    let symbolResult = collectionContract.try_symbol();
+    collection.symbol = symbolResult.reverted ? 'unknown' : symbolResult.value
+
     collection.txCount = ZERO_BI;
   }
 
