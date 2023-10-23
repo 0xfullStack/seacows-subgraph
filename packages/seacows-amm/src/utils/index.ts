@@ -3,6 +3,7 @@ import { Transaction, Pool, PoolDayData, PoolWeekData, PoolYearData, Token } fro
 import { Pool as PoolContract } from "../../generated/templates/Pool/Pool";
 import { ZERO_BI, ONE_BI, ZERO_BD, PERCENTAGE_PRECISION } from "../constants";
 
+// 5 => 100000, 0 => 1, 2 => 100
 export function exponentToBigDecimal(decimals: BigInt): BigDecimal {
   let bd = BigDecimal.fromString("1");
   for (let i = ZERO_BI; i.lt(decimals as BigInt); i = i.plus(ONE_BI)) {
@@ -11,6 +12,7 @@ export function exponentToBigDecimal(decimals: BigInt): BigDecimal {
   return bd;
 }
 
+// 5 => 100000, 0 => 1, 2 => 100
 export function exponentToBigInt(decimals: BigInt): BigInt {
   let bd = BigInt.fromString("1");
   for (let i = ZERO_BI; i.lt(decimals as BigInt); i = i.plus(ONE_BI)) {

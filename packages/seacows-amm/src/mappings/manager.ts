@@ -30,7 +30,7 @@ export function handleTransfer(event: Transfer): void {
     toUser.save();
   }
 
-  let position = Position.load(_tokenId.toHexString());
+  let position = Position.load(_tokenId.toString());
   if (position === null) {
     position = new Position(_tokenId.toString());
   }
@@ -52,13 +52,13 @@ export function handleTransferValue(event: TransferValue): void {
   const _fromTokenId = event.params._fromTokenId;
   const _toTokenId = event.params._toTokenId;
 
-  let fromPosition = Position.load(_fromTokenId.toHexString());
+  let fromPosition = Position.load(_fromTokenId.toString());
   if (fromPosition !== null) {
     const manager = SeacowsPositionManagerContract.bind(event.address);
     fromPosition.liquidity = manager.balanceOf1(_fromTokenId);
     fromPosition.save();
   }
-  let toPosition = Position.load(_toTokenId.toHexString());
+  let toPosition = Position.load(_toTokenId.toString());
   if (toPosition !== null) {
     const manager = SeacowsPositionManagerContract.bind(event.address);
     toPosition.liquidity = manager.balanceOf1(_toTokenId);

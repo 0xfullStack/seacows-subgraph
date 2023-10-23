@@ -1,0 +1,7 @@
+{
+  "network": "hardhat",
+  "manager": {
+    "address": "0x3d3516b44210F517426d323Da2fd02E9755a6365",
+    "startBlock": 0
+  }
+}

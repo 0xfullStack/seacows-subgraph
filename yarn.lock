@@ -766,10 +766,10 @@
     fast-url-parser "^1.1.3"
     tslib "^2.3.1"
 
-"@yolominds/seacows-sdk@^1.16.0":
-  version "1.16.0"
-  resolved "https://npm.pkg.github.com/download/@yolominds/seacows-sdk/1.16.0/38ef53d9adf38fb97e972a1a5b213e04a72a2c0c#38ef53d9adf38fb97e972a1a5b213e04a72a2c0c"
-  integrity sha512-8fjw4KsAQQS+evOyU71hw5x+XxAEvBKoJN3m6Si9KcPbT4Q//xVMUPnaQDehB4rcaa74CJe7eYgXaB1RzgNNxQ==
+"@yolominds/seacows-sdk@^1.17.3":
+  version "1.17.3"
+  resolved "https://npm.pkg.github.com/download/@yolominds/seacows-sdk/1.17.3/b188c26aecc66df8dad700244b2f82839c4aefee#b188c26aecc66df8dad700244b2f82839c4aefee"
+  integrity sha512-BTE2wFz4lKj7FI/F5kN0x5nlwzjQDoR5bkrQDAG54R2pdJ7ihosicEbRe3EVUpAlwOzHGvuTrNUE8q4kJlpLdA==
   dependencies:
     "@ethersproject/abstract-provider" "^5.7.0"
     ethers "^5.7.2"

@@ -5,23 +5,23 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "yarn codegen && graph build",
-    "prepare:local": "mustache config/dev/mumbai.json subgraph.template.yaml > subgraph.yaml",
-    "create:local": "graph create --node http://localhost:8020/ seacows/seacows-amm-subgraph",
-    "remove:local": "graph remove --node http://localhost:8020/ seacows/seacows-amm-subgraph",
-    "deploy:local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 seacows/seacows-amm-subgraph",
+    "prepare:local:hardhat": "mustache config/dev/hardhat.json subgraph.template.yaml > subgraph.yaml",
+    "create:local:hardhat": "graph create --node http://localhost:8020/ seacows/seacows-amm-subgraph",
+    "remove:local:hardhat": "graph remove --node http://localhost:8020/ seacows/seacows-amm-subgraph",
+    "deploy:local:hardhat": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 seacows/seacows-amm-subgraph",
+    "prepare:local:goerli": "mustache config/dev/goerli.json subgraph.template.yaml > subgraph.yaml",
+    "create:local:goerli": "graph create --node http://localhost:8020/ seacows/seacows-amm-subgraph",
+    "remove:local:goerli": "graph remove --node http://localhost:8020/ seacows/seacows-amm-subgraph",
+    "deploy:local:goerli": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 seacows/seacows-amm-subgraph",
     "prepare:dev:goerli": "mustache config/dev/goerli.json subgraph.template.yaml > subgraph.yaml",
     "create:dev:goerli": "graph create --node https://subgraph-goerli-dev.seacows.io/deploy seacows/seacows-amm-subgraph",
     "deploy:dev:goerli": "graph deploy --node https://subgraph-goerli-dev.seacows.io/deploy --ipfs https://ipfs-dev.seacows.io seacows/seacows-amm-subgraph --version-label 1.0.0",
-    "remove:dev:goerli": "graph remove --node https://subgraph-goerli-dev.seacows.io/deploy seacows/seacows-amm-subgraph",
-    "prepare:dev:mumbai": "mustache config/dev/mumbai.json subgraph.template.yaml > subgraph.yaml",
-    "create:dev:mumbai": "graph create --node https://subgraph-mumbai-dev.seacows.io/deploy seacows/seacows-amm-subgraph",
-    "deploy:dev:mumbai": "graph deploy --node https://subgraph-mumbai-dev.seacows.io/deploy --ipfs https://ipfs-dev.seacows.io seacows/seacows-amm-subgraph  --version-label 1.0.0",
-    "remove:dev:mumbai": "graph remove --node https://subgraph-mumbai-dev.seacows.io/deploy seacows/seacows-amm-subgraph"
+    "remove:dev:goerli": "graph remove --node https://subgraph-goerli-dev.seacows.io/deploy seacows/seacows-amm-subgraph"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.49.0",
     "@graphprotocol/graph-ts": "^0.30.0",
-    "@yolominds/seacows-sdk": "^1.16.0"
+    "@yolominds/seacows-sdk": "^1.17.3"
   },
   "devDependencies": {
     "@types/mustache": "^4.2.2",
