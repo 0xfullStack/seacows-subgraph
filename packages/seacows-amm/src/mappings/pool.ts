@@ -199,7 +199,7 @@ export function handleBurn(event: BurnEvent): void {
   let token = Token.load(pool.token) as Token;
   let collection = Collection.load(pool.collection) as Collection;
 
-  let tokenAmount = convertTokenToDecimal(event.params.tokenAmountIn, token.decimals);
+  let tokenAmount = convertTokenToDecimal(event.params.tokenAmountOut, token.decimals);
   let nftAmount = BigInt.fromI32(event.params.idsOut.length); //convertTokenToInt(event.params.idsOut.length, BI_18);
 
   // daily data

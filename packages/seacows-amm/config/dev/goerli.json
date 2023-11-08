@@ -1,7 +1,7 @@
 {
   "network": "goerli",
   "manager": {
-    "address": "0x3ad93A20d5E5b8304b22C8D1195B5335f6e23214",
-    "startBlock": 9927532
+    "address": "0x82548e096a6692A049c08BD74104183bB7fb36AF",
+    "startBlock": 9972694
   }
 }
