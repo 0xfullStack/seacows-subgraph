@@ -35,7 +35,36 @@ dataSources:
         - event: PairCreated(indexed address,indexed address,indexed uint256,uint256,address)
           handler: handlePairCreated
       file: ./src/mappings/manager.ts
-
+  - kind: ethereum
+    name: SpeedBump
+    network: {{ network }}
+    source:
+      address: "{{ speedbump.address }}"
+      abi: SpeedBump
+      startBlock: {{ speedbump.startBlock }}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - SpeedBump
+      abis:
+        - name: SpeedBump
+          file: ./abis/SpeedBump.json
+      eventHandlers:
+        - event: RegisterETH(indexed address,uint256)
+          handler: handleRegisterETH
+        - event: RegisterToken(indexed address,indexed address,uint256)
+          handler: handleRegisterToken
+        - event: RegisterNFTs(indexed address,indexed address,uint256[])
+          handler: handleRegisterNFTs
+        - event: WithdrawETH(indexed address,uint256)
+          handler: handleWithdrawETH
+        - event: WithdrawToken(indexed address,indexed address,uint256)
+          handler: handleWithdrawToken
+        - event: WithdrawNFTs(indexed address,indexed address,uint256[])
+          handler: handleWithdrawNFTs
+      file: ./src/mappings/speedbump.ts
 
 templates:
   - name: Pool

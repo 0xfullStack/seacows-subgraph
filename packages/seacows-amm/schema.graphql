@@ -195,3 +195,37 @@ type PoolYearData @entity {
   price: BigDecimal!
   priceChange: BigDecimal!
 }
+
+type SpeedBumpPosition @entity {
+  # owner address
+  id: ID!
+  
+  # eth amount
+  value: BigInt!
+  
+  tokens: [SpeedBumpToken!]! @derivedFrom(field: "position")
+  collections: [SpeedBumpCollection!]! @derivedFrom(field: "position")
+}
+
+type SpeedBumpToken @entity {
+  # owner address + token address
+  id: ID!
+  amount: BigInt!
+
+  position: SpeedBumpPosition!
+}
+
+type SpeedBumpCollection @entity {
+  # owner address + collection address
+  id: ID!
+  tokenIds: [SpeedBumpCollectionTokenID!]! @derivedFrom(field: "collection")
+
+  position: SpeedBumpPosition!
+}
+
+type SpeedBumpCollectionTokenID @entity {
+  # owner address + collection address + tokenID
+  id: ID!
+  tokenId: BigInt
+  collection: SpeedBumpCollection!
+}
