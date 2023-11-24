@@ -1,11 +1,11 @@
 {
   "network": "goerli",
   "manager": {
-    "address": "0x88A2064bF6eAa0d893A656F44A0E00466dC82D56",
-    "startBlock": 10035000
+    "address": "0x5d230c27Efdd6D72f4171d7A7e14FeE02cb19f09",
+    "startBlock": 10080965
   },
   "speedbump": {
-    "address": "0x5C9884eBa04fbEF7A913cfE327256a1AD7C82075",
-    "startBlock": 10035000
+    "address": "0x177C60B203818dBeF2aD95EB0F233bb0f0318Bb8",
+    "startBlock": 10080965
   }
 }
