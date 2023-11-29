@@ -26,14 +26,3 @@ yarn workspaces run create:dev:goerli
 // 5. deploy subgraph node
 yarn workspaces run deploy:dev:goerli
 ```
-
-## Different Environments
-
-local:hardhat
-local graph node with local hardhat testnet
-
-local:goerli
-local graph node with goerli testnet
-
-dev:goerli
-graph node self-host in aws with goerli testnet 
