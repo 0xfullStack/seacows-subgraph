@@ -151,6 +151,7 @@ export function updateAPR(event: ethereum.Event): void {
 
   const poolContract = PoolContract.bind(event.address);
   const feePercentage = poolContract.feePercent();
+  const reserve = poolContract.getReserves();
 
   let totalVolume: BigDecimal = ZERO_BD;
 
@@ -169,7 +170,7 @@ export function updateAPR(event: ethereum.Event): void {
   const totalFee = totalVolume
     .times(BigDecimal.fromString(feePercentage.toString()))
     .div(BigDecimal.fromString("10000"));
-  const totalValueLocked = convertTokenToDecimal(pool.liquidity, token.decimals).times(BigDecimal.fromString("2"));
+  const totalValueLocked = convertTokenToDecimal(reserve.value0, token.decimals).times(BigDecimal.fromString("2"));
 
   pool.totalVolume = totalVolume;
   pool.totalFee = totalFee;
