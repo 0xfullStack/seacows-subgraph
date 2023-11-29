@@ -769,10 +769,10 @@
     fast-url-parser "^1.1.3"
     tslib "^2.3.1"
 
-"@yolominds/seacows-sdk@^1.20.6":
-  version "1.20.6"
-  resolved "https://npm.pkg.github.com/download/@yolominds/seacows-sdk/1.20.6/7150827ca50835f1f0255ffe103f3048bc67e07a#7150827ca50835f1f0255ffe103f3048bc67e07a"
-  integrity sha512-iX2mG8W6DZ15O8VKm3jzqwkbVBfBoV1UMn5GW1kTPIzileCmQycu1wq05wyJnrwThlydbZG4ItDLvwaaAtpowA==
+"@yolominds/seacows-sdk@^1.20.13":
+  version "1.20.13"
+  resolved "https://npm.pkg.github.com/download/@yolominds/seacows-sdk/1.20.13/1f170362b8bea482805a074421f86518e63d5889#1f170362b8bea482805a074421f86518e63d5889"
+  integrity sha512-IbO3kxUh1Wx2lLsPmIJocdWBTf9VIXTqMIqKURe3ftDtznxStwHbaXXZb8vtrLoaPenVCEujNkMnt+KsaCcAfg==
   dependencies:
     "@ethersproject/abstract-provider" "^5.7.0"
     ethers "^5.7.2"
@@ -2003,9 +2003,9 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-"gluegun@git+https://github.com/edgeandnode/gluegun.git#v4.3.1-pin-colors-dep":
+"gluegun@https://github.com/edgeandnode/gluegun#v4.3.1-pin-colors-dep":
   version "4.3.1"
-  resolved "git+https://github.com/edgeandnode/gluegun.git#b34b9003d7bf556836da41b57ef36eb21570620a"
+  resolved "https://github.com/edgeandnode/gluegun#b34b9003d7bf556836da41b57ef36eb21570620a"
   dependencies:
     apisauce "^1.0.1"
     app-module-path "^2.2.0"
