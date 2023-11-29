@@ -7,7 +7,7 @@ import {
   Mint as MintEvent,
   Pool as PoolContract
 } from "../../generated/templates/Pool/Pool";
-import { ONE_BI, BI_18, ZERO_BD, ZERO_BI, PERCENTAGE_PRECISION } from "../constants";
+import { ONE_BI, BI_18, ZERO_BD, ONE_BD, PERCENTAGE_PRECISION } from "../constants";
 import {
   convertTokenToDecimal,
   loadTransaction,
@@ -88,21 +88,21 @@ export function handleSwap(event: SwapEvent): void {
   // update daily data
   poolDayData.volume = poolDayData.volume.plus(volume);
   if (!pool.lastDayPrice.equals(ZERO_BD) && !pool.price.equals(ZERO_BD)) {
-    poolDayData.priceChange = pool.price.times(PERCENTAGE_PRECISION).div(pool.lastDayPrice);
+    poolDayData.priceChange = pool.price.times(PERCENTAGE_PRECISION).div(pool.lastDayPrice).minus(ONE_BD);
   } else {
     poolDayData.priceChange = ZERO_BD;
   }
   // update weekly data
   poolWeekData.volume = poolWeekData.volume.plus(volume);
   if (!pool.lastWeekPrice.equals(ZERO_BD) && !pool.price.equals(ZERO_BD)) {
-    poolWeekData.priceChange = pool.price.times(PERCENTAGE_PRECISION).div(pool.lastWeekPrice);
+    poolWeekData.priceChange = pool.price.times(PERCENTAGE_PRECISION).div(pool.lastWeekPrice).minus(ONE_BD);
   } else {
     poolWeekData.priceChange = ZERO_BD;
   }
   // update yearly data
   poolYearData.volume = poolYearData.volume.plus(volume);
   if (!pool.lastWeekPrice.equals(ZERO_BD) && !pool.price.equals(ZERO_BD)) {
-    poolYearData.priceChange = pool.price.times(PERCENTAGE_PRECISION).div(pool.lastWeekPrice);
+    poolYearData.priceChange = pool.price.times(PERCENTAGE_PRECISION).div(pool.lastWeekPrice).minus(ONE_BD);
   } else {
     poolYearData.priceChange = ZERO_BD;
   }
