@@ -28,6 +28,7 @@ seacows_amm_directory="./packages/seacows-amm"
 cd "$seacows_amm_directory"
 
 npx mustache config/$environment/$network.json subgraph.template.yaml > subgraph.yaml
-
+graph codegen
+graph build
 graph create --node https://subgraph-$network-$environment.seacows.io/deploy seacows/seacows-amm-subgraph
 graph deploy --node https://subgraph-$network-$environment.seacows.io/deploy --ipfs https://ipfs-dev.seacows.io seacows/seacows-amm-subgraph --version-label 1.1.0
