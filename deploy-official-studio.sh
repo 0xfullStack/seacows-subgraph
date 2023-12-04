@@ -1,4 +1,5 @@
 #!/bin/bash
+# setup permission before execute script: chmod +x deploy-official-studio.sh
 
 echo "############################## Choose The Network ##############################"
 

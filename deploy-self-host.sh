@@ -1,4 +1,5 @@
 #!/bin/bash
+# setup permission before execute script: chmod +x deploy-self-host.sh
 
 echo "############################## Choose The Network ##############################"
 
