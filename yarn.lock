@@ -398,7 +398,7 @@
     graphql-import-node "^0.0.5"
     js-yaml "^4.1.0"
 
-"@graphprotocol/graph-cli@^0.49.0":
+"@graphprotocol/graph-cli@0.49.0":
   version "0.49.0"
   resolved "https://registry.yarnpkg.com/@graphprotocol/graph-cli/-/graph-cli-0.49.0.tgz#bf516801ea3e479c96dbcc508f569e36bf0cb055"
   integrity sha512-UZsMTcTZN/EFT/1t8Z253ZtEZXqYQIWKbSox+Q6Fu4bzkK7LlKtoKKrOhxqMfSe2jewFKkCQkVWVC4tXoN+sVQ==
@@ -769,10 +769,10 @@
     fast-url-parser "^1.1.3"
     tslib "^2.3.1"
 
-"@yolominds/seacows-sdk@^1.20.13":
-  version "1.20.13"
-  resolved "https://npm.pkg.github.com/download/@yolominds/seacows-sdk/1.20.13/1f170362b8bea482805a074421f86518e63d5889#1f170362b8bea482805a074421f86518e63d5889"
-  integrity sha512-IbO3kxUh1Wx2lLsPmIJocdWBTf9VIXTqMIqKURe3ftDtznxStwHbaXXZb8vtrLoaPenVCEujNkMnt+KsaCcAfg==
+"@yolominds/seacows-sdk@^1.20.17":
+  version "1.20.17"
+  resolved "https://npm.pkg.github.com/download/@yolominds/seacows-sdk/1.20.17/b03317f27f16cf9e0fb08ee7da4be0d6deacbb37#b03317f27f16cf9e0fb08ee7da4be0d6deacbb37"
+  integrity sha512-Tv9RBTYNZYCm1sXQwkFF+ZQ72t3+EGGpdSNmooqk11m7ATXUsFal18JpRwXffSuAb7WeDmlhs75n82zx8734fQ==
   dependencies:
     "@ethersproject/abstract-provider" "^5.7.0"
     ethers "^5.7.2"
@@ -2003,9 +2003,9 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-"gluegun@https://github.com/edgeandnode/gluegun#v4.3.1-pin-colors-dep":
+"gluegun@git+https://github.com/edgeandnode/gluegun.git#v4.3.1-pin-colors-dep":
   version "4.3.1"
-  resolved "https://github.com/edgeandnode/gluegun#b34b9003d7bf556836da41b57ef36eb21570620a"
+  resolved "git+https://github.com/edgeandnode/gluegun.git#b34b9003d7bf556836da41b57ef36eb21570620a"
   dependencies:
     apisauce "^1.0.1"
     app-module-path "^2.2.0"
