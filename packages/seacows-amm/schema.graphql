@@ -85,6 +85,8 @@ type Pool @entity {
   totalVolume: BigDecimal!
   totalFee: BigDecimal!
   totalValueLocked: BigDecimal!
+
+  timestamp: BigInt!
 }
 
 type User @entity {

@@ -142,6 +142,7 @@ export function handlePairCreated(event: PairCreated): void {
   pool.totalVolume = ZERO_BD;
   pool.totalFee = ZERO_BD;
   pool.totalValueLocked = ZERO_BD;
+  pool.timestamp = ZERO_BI;
 
   manager.save();
   pool.save();

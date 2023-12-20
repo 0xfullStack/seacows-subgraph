@@ -84,6 +84,8 @@ export function handleSwap(event: SwapEvent): void {
   // update pool price
   pool.priceAt = event.block.timestamp;
   pool.price = getCurrentPrice(poolAddress);
+  // update pool change time
+  pool.timestamp = transaction.timestamp;
 
   // update daily data
   poolDayData.volume = poolDayData.volume.plus(volume);
@@ -182,6 +184,8 @@ export function handleMint(event: MintEvent): void {
   // update pool price
   pool.priceAt = event.block.timestamp;
   pool.price = getCurrentPrice(poolAddress);
+  // update pool change time
+  pool.timestamp = transaction.timestamp;
 
   pool.save();
   mint.save();
@@ -254,6 +258,8 @@ export function handleBurn(event: BurnEvent): void {
   // update pool price
   pool.priceAt = event.block.timestamp;
   pool.price = getCurrentPrice(poolAddress);
+  // update pool change time
+  pool.timestamp = transaction.timestamp;
 
   pool.save();
   burn.save();
