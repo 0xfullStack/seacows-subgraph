@@ -3,11 +3,11 @@
 
 echo "############################## Choose The Network ##############################"
 
-networks=("goerli" "sepolia")
+networks=("goerli" "sepolia" "mumbai")
 
 select network in "${networks[@]}"; do
   case $network in
-    "sepolia"|"goerli")
+    "sepolia"|"goerli"|"mumbai")
       environment="dev"
       break
       ;;

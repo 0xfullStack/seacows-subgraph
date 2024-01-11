@@ -1,0 +1,11 @@
+{
+    "network": "mumbai",
+    "manager": {
+      "address": "",
+      "startBlock": 0
+    },
+    "speedbump": {
+      "address": "",
+      "startBlock": 0
+    }
+  }
