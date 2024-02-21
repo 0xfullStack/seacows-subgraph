@@ -82,8 +82,6 @@ templates:
         - name: Pool
           file: ../../node_modules/@yolominds/seacows-sdk/abis/amm/SeacowsERC721TradePair.json
       eventHandlers:
-        - event: Sync(uint256,uint256)
-          handler: handleSync
         - event: Swap(indexed address,uint256,uint256,uint256,uint256,indexed address)
           handler: handleSwap
         - event: Mint(indexed address,uint256,uint256)

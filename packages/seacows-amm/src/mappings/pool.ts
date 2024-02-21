@@ -2,7 +2,6 @@ import { BigInt, BigDecimal } from "@graphprotocol/graph-ts";
 import { Burn, Collection, Mint, Pool, Swap, Token } from "../../generated/schema";
 import {
   Swap as SwapEvent,
-  Sync as SyncEvent,
   Burn as BurnEvent,
   Mint as MintEvent,
   Pool as PoolContract
@@ -18,8 +17,6 @@ import {
   getCurrentPrice,
   updateAPR
 } from "../utils";
-
-export function handleSync(event: SyncEvent): void {}
 
 export function handleSwap(event: SwapEvent): void {
   let poolAddress = event.address;
