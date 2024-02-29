@@ -89,21 +89,21 @@ export function handleSwap(event: SwapEvent): void {
   if (!pool.lastDayPrice.equals(ZERO_BD) && !pool.price.equals(ZERO_BD)) {
     poolDayData.priceChange = pool.price.minus(pool.lastDayPrice).div(pool.lastDayPrice).times(PERCENTAGE_PRECISION);
   } else {
-    poolDayData.priceChange = ZERO_BD;
+    poolDayData.priceChange = pool.price.minus(pool.initialPrice).div(pool.initialPrice).times(PERCENTAGE_PRECISION);
   }
   // update weekly data
   poolWeekData.volume = poolWeekData.volume.plus(volume);
   if (!pool.lastWeekPrice.equals(ZERO_BD) && !pool.price.equals(ZERO_BD)) {
     poolWeekData.priceChange = pool.price.minus(pool.lastWeekPrice).div(pool.lastWeekPrice).times(PERCENTAGE_PRECISION);
   } else {
-    poolWeekData.priceChange = ZERO_BD;
+    poolWeekData.priceChange = pool.price.minus(pool.initialPrice).div(pool.initialPrice).times(PERCENTAGE_PRECISION);
   }
   // update yearly data
   poolYearData.volume = poolYearData.volume.plus(volume);
   if (!pool.lastWeekPrice.equals(ZERO_BD) && !pool.price.equals(ZERO_BD)) {
     poolYearData.priceChange = pool.price.minus(pool.lastWeekPrice).div(pool.lastWeekPrice).times(PERCENTAGE_PRECISION);
   } else {
-    poolYearData.priceChange = ZERO_BD;
+    poolYearData.priceChange = pool.price.minus(pool.initialPrice).div(pool.initialPrice).times(PERCENTAGE_PRECISION);
   }
 
   pool.save();

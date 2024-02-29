@@ -130,6 +130,8 @@ export function handlePairCreated(event: PairCreated): void {
   pool.slot = _slot;
   pool.txCount = ZERO_BI;
 
+  pool.initialPrice = getCurrentPrice(_pair);
+  pool.initialPriceAt = event.block.timestamp;
   pool.price = getCurrentPrice(_pair);
   pool.priceAt = event.block.timestamp;
   pool.lastPrice = ZERO_BD;

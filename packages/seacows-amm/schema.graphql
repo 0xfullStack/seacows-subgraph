@@ -73,6 +73,8 @@ type Pool @entity {
 
   price: BigDecimal!
   priceAt: BigInt!
+  initialPrice: BigDecimal!
+  initialPriceAt: BigInt!
   lastPrice: BigDecimal!
   lastPriceAt: BigInt!
   lastDayPrice: BigDecimal!
