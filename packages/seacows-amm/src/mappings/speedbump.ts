@@ -69,9 +69,9 @@ export function handleRegisterNFTs(event: RegisterNFTsEvent): void {
         let speedBumpCollectionTokenID = SpeedBumpCollectionTokenID.load(_owner + "-" + _collection + "-" + _tokenIds[i].toString());
         if (speedBumpCollectionTokenID == null) {
             speedBumpCollectionTokenID = new SpeedBumpCollectionTokenID(_owner + "-" + _collection + "-" + _tokenIds[i].toString());
-            speedBumpCollectionTokenID.tokenId = _tokenIds[i];
         }   
         speedBumpCollectionTokenID.collection = speedBumpCollection.id;
+        speedBumpCollectionTokenID.tokenId = _tokenIds[i];
         speedBumpCollectionTokenID.save();
     }
 

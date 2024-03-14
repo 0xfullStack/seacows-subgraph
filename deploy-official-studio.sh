@@ -29,4 +29,4 @@ npx mustache config/$environment/$network.json subgraph.template.yaml > subgraph
 graph codegen
 graph build
 graph auth --studio e5187c15694526c4fa893b1cf3a9de77
-graph deploy --studio $network-seacows-amm --version-label 1.1.0
+graph deploy --studio $network-seacows-amm --version-label 1.1.1
