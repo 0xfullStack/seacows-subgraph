@@ -1,11 +1,11 @@
 {
     "network": "mainnet",
     "manager": {
-      "address": "",
-      "startBlock": 0
+      "address": "0xF26a3Cb138736038c2dD5830De64402Dd15214a2",
+      "startBlock": 19872100
     },
     "speedbump": {
-      "address": "",
-      "startBlock": 0
+      "address": "0x7a21d1B53F1A3700dB3c239C8973233d5d9222E7",
+      "startBlock": 19872100
     }
   }
